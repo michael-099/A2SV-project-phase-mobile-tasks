@@ -1,11 +1,35 @@
-// Named Parameters with required
 class Product {
-  String name;
-  String discription;
-  double price;
+  String _name;
+  String _description; 
+  double _price;
 
-  Product({required this.name, required this.price, required this.discription});
+
+  Product({required String name, required double price, required String description})
+      : _name = name,
+        _price = price,
+        _description = description;
+
+
+  String get name => _name;
+  set name(String value) => _name = value;
+
+  String get description => _description;
+  set description(String value) => _description = value;
+
+  double get price => _price;
+  set price(double value) => _price = value;
 }
+
+
+
+// Named Parameters with required
+// class Product {
+//   String name;
+//   String discription;
+//   double price;
+
+//   Product({required this.name, required this.price, required this.discription});
+// }
 
 // Positional Parameters
 // class Product {

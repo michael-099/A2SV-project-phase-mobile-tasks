@@ -14,11 +14,11 @@ class ProductManager {
     if (products.isEmpty) {
       print("empty Product");
     } else {
-      print("product" + "|" + "discription" + "|" + "price");
+      print("product" + "|" + "description" + "|" + "price");
       for (int i = 0; i < products.length; i++) {
         print(products[i].name +
             "|" +
-            products[i].discription +
+            products[i].description +
             "|" +
             products[i].price.toString());
       }
@@ -30,7 +30,7 @@ class ProductManager {
       if (product == products[i].name) {
         print(products[i].name +
             "|" +
-            products[i].discription +
+            products[i].description +
             "|" +
             products[i].price.toString());
 
@@ -49,7 +49,7 @@ class ProductManager {
     for (int i = 0; i < products.length; i++) {
       if (product == products[i].name) {
         print("press 1 to edit name ");
-        print("press 2 to edit discription ");
+        print("press 2 to edit description ");
         print("press 3 to edit price ");
         print("press 4 to edit all ");
         String? input = stdin.readLineSync();
@@ -69,7 +69,7 @@ class ProductManager {
             print("enter the new discreption ");
             String? inputDiscription = stdin.readLineSync();
             if (inputDiscription != null) {
-              products[i].discription = inputDiscription;
+              products[i].description = inputDiscription;
             }
             print("null input");
           }
@@ -93,7 +93,7 @@ class ProductManager {
             print("enter the new discreption ");
             String? inputDiscription = stdin.readLineSync();
             if (inputDiscription != null) {
-              products[i].discription = inputDiscription;
+              products[i].description = inputDiscription;
             }
 
             print(" enter the new price ");
