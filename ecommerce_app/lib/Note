@@ -1,0 +1,30 @@
+my_flutter_app/
+├── android/                 # Android-specific configuration and code
+├── build/                   # Automatically generated build files
+├── ios/                     # iOS-specific configuration and code
+├── lib/                     # Main directory for Dart code
+│   ├── main.dart            # Entry point of the Flutter app
+│   ├── screens/             # Directory for screen widgets
+│   │   ├── home_screen.dart
+│   │   └── details_screen.dart
+│   ├── widgets/             # Directory for reusable widgets
+│   │   ├── custom_button.dart
+│   │   └── custom_card.dart
+│   ├── models/              # Directory for data models
+│   │   └── user.dart
+│   ├── services/            # Directory for business logic and services
+│   │   └── api_service.dart
+│   ├── providers/           # Directory for state management classes
+│   │   └── user_provider.dart
+│   └── utils/               # Directory for utility classes and functions
+│       └── constants.dart
+├── test/                    # Unit and widget tests
+│   └── widget_test.dart
+├── assets/                  # Directory for images, fonts, and other assets
+│   ├── images/
+│   │   └── logo.png
+│   └── fonts/
+│       └── custom_font.ttf
+├── pubspec.yaml             # Project metadata and dependencies
+├── README.md                # Project readme file
+└── .gitignore               # Git ignore file
