@@ -1,5 +1,8 @@
 import "package:flutter/material.dart";
 
+import "product_description.dart";
+import "product_name_and_price.dart";
+
 class ProductCard extends StatelessWidget {
   String productName;
   String price;
@@ -39,53 +42,8 @@ class ProductCard extends StatelessWidget {
                 width: 366,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    productName,
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w800,
-                        color: Colors.grey.shade700),
-                  ),
-                  Text(
-                    price,
-                    textAlign: TextAlign.right,
-                    style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w100,
-                        color: Colors.grey.shade700),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    label,
-                    style: const TextStyle(color: Colors.black26),
-                  ),
-                  Row(
-                    children: [
-                      const Icon(
-                        Icons.star_half_rounded,
-                        color: Colors.orangeAccent,
-                      ),
-                      Text(
-                        rating,
-                        style: const TextStyle(color: Colors.black26),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+            ProductNameAndPrice(productName: productName, price: price),
+            ProductDescription(label: label, rating: rating),
           ],
         ),
       ),
