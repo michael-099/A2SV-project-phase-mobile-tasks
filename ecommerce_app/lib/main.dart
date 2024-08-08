@@ -2,26 +2,8 @@
 import 'package:flutter/material.dart';
 import 'widgets/product_card.dart';
 import 'widgets/top_bar.dart';
+import 'screens/home_page.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
-      home: Scaffold(
-        
-
-        body: Column(
-          children: [
-            TopBar(),
-            ProductCard(
-            productName: "Derby Leather Shoes",
-            price: "\$200",
-            label: "Men's shoe",
-            rating: "4.5",
-            height: 300,
-            width: 420,
-                  ),
-          ],
-        )),
-    ),
-  );
+  runApp(HomePage());
 }
