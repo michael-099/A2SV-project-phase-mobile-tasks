@@ -12,6 +12,18 @@ class HomePage extends StatelessWidget {
             child: Column(
               children: [
                 const TopBar(),
+                const Align(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    "Avilable Products",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      color: Color.fromARGB(221, 59, 55, 55),
+                    ),
+                    textAlign: TextAlign.start,
+                  ),
+                ),
                 ProductCard(
                   productName: "Derby Leather Shoes",
                   price: "\$200",
@@ -51,7 +63,6 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ),
-      
       ),
     );
   }
