@@ -8,6 +8,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.green,
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: SingleChildScrollView(
