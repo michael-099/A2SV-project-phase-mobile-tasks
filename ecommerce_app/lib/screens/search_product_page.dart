@@ -36,8 +36,8 @@ class _SearchProductPageState extends State<SearchProductPage> {
                 SizedBox(
                   width: 366,
                   child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    // crossAxisAlignment: CrossAxisAlignment.center,
+                    // mainAxisAlignment: MainAxisAlignment.center,
                     children: [
 
                       SizedBox(
@@ -54,7 +54,7 @@ class _SearchProductPageState extends State<SearchProductPage> {
                         height: 40,
                         width: 66,
                         child: Padding(
-                          padding: const EdgeInsets.fromLTRB(5,0,0,5),
+                          padding: const EdgeInsets.fromLTRB(5,10,0,0),
                           child: FilledButton(
                             style: FilledButton.styleFrom(
                               shape: RoundedRectangleBorder(

@@ -16,7 +16,7 @@ class CustomTextField extends StatefulWidget {
       required this.maxLines,
       required this.minLines,
       this.suffixIcon,
-      this.width=double.infinity});
+      this.width = double.infinity});
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
