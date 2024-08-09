@@ -31,24 +31,21 @@ class HomePage extends StatelessWidget {
                   price: "\$200",
                   label: "Men's shoe",
                   rating: "4.5",
-                  height: 300,
-                  width: 420,
+                 
                 ),
                 ProductCard(
                   productName: "Derby Leather Shoes",
                   price: "\$200",
                   label: "Men's shoe",
                   rating: "4.5",
-                  height: 300,
-                  width: 420,
+                 
                 ),
                 ProductCard(
                   productName: "Derby Leather Shoes",
                   price: "\$200",
                   label: "Men's shoe",
                   rating: "4.5",
-                  height: 300,
-                  width: 420,
+                  
                 ),
               ],
             ),

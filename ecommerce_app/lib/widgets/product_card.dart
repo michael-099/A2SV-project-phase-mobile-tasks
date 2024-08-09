@@ -8,16 +8,17 @@ class ProductCard extends StatelessWidget {
   String price;
   String label;
   String rating;
-  double width;
-  double height;
+  // double width;
+  // double height;
 
   ProductCard(
       {required this.productName,
       required this.price,
       required this.label,
       required this.rating,
-      required this.width,
-      required this.height});
+      // required this.width,
+      // required this.height
+      });
   @override
   Widget build(BuildContext context) {
     return IntrinsicWidth(
