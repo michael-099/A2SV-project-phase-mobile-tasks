@@ -14,7 +14,7 @@ class UploadFile extends StatelessWidget {
           color: Color.fromARGB(9, 0, 0, 0),
         ),
         //
-        child: const Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -29,6 +29,22 @@ class UploadFile extends StatelessWidget {
                   fontSize: 15,
                   fontWeight: FontWeight.w600,
                   color: Colors.black38),
+            ),
+            SizedBox(
+              height: 40,
+              width: double.infinity,
+              child: FilledButton(
+                onPressed: () {},
+                child: Text("Apply"),
+                style: FilledButton.styleFrom(
+                  side: BorderSide(color: Colors.blue),
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.blue,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                ),
+              ),
             )
           ],
         ));

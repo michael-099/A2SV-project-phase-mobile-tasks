@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+
 import '../widgets/product_card.dart';
 import '../widgets/top_bar.dart';
+import '../widgets/filter_prodact.dart';
 
 class SearchProductPage extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -19,48 +21,46 @@ class SearchProductPage extends StatelessWidget {
               )),
         ),
         body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                ProductCard(
-                  productName: "Derby Leather Shoes",
-                  price: "\$200",
-                  label: "Men's shoe",
-                  rating: "4.5",
-                ),
-                ProductCard(
-                  productName: "Derby Leather Shoes",
-                  price: "\$200",
-                  label: "Men's shoe",
-                  rating: "4.5",
-                ),
-                ProductCard(
-                  productName: "Derby Leather Shoes",
-                  price: "\$200",
-                  label: "Men's shoe",
-                  rating: "4.5",
-                ),
-                SizedBox(
-                  height: 40,
-                  width: double.infinity,
-                  child: FilledButton(
-                    onPressed: () {},
-                    child: const Text("Apply"),
-                    style: FilledButton.styleFrom(
-                      side: const BorderSide(color: Colors.blue),
-                      foregroundColor: Colors.white,
-                      backgroundColor: Colors.blue,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5.0),
-                      ),
+            padding: const EdgeInsets.all(16.0),
+            child: Container(
+              alignment: Alignment.center,
+              width: double.infinity,
+              child: Stack(
+                children: [
+                  SingleChildScrollView(
+                    controller: ScrollController(initialScrollOffset: 0),
+                    child: Column(
+                      children: [
+                        ProductCard(
+                          productName: "Derby Leather Shoes",
+                          price: "\$200",
+                          label: "Men's shoe",
+                          rating: "4.5",
+                        ),
+                        ProductCard(
+                          productName: "Derby Leather Shoes",
+                          price: "\$200",
+                          label: "Men's shoe",
+                          rating: "4.5",
+                        ),
+                        ProductCard(
+                          productName: "Derby Leather Shoes",
+                          price: "\$200",
+                          label: "Men's shoe",
+                          rating: "4.5",
+                        ),
+                      ],
                     ),
                   ),
-                )
-              ],
-            ),
-          ),
-        ),
+                  Positioned(
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    child: FilterProdactWidget(),
+                  ),
+                ],
+              ),
+            )),
       ),
     );
   }
