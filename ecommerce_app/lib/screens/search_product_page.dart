@@ -15,7 +15,6 @@ class SearchProductPage extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-      
                 ProductCard(
                   productName: "Derby Leather Shoes",
                   price: "\$200",
@@ -40,6 +39,22 @@ class SearchProductPage extends StatelessWidget {
                   height: 300,
                   width: 420,
                 ),
+                SizedBox(
+                  height: 40,
+                  width: double.infinity,
+                  child: FilledButton(
+                    onPressed: () {},
+                    child: const Text("Apply"),
+                    style: FilledButton.styleFrom(
+                      side: const BorderSide(color: Colors.blue),
+                      foregroundColor: Colors.white,
+                      backgroundColor: Colors.blue,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           ),
