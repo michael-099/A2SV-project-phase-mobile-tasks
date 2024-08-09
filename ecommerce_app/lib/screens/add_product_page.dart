@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+
 import '../widgets/custom_text_field.dart';
 
 class AddProductPage extends StatefulWidget {
@@ -11,6 +12,12 @@ class AddProductPage extends StatefulWidget {
 }
 
 class _AddProductPageState extends State<AddProductPage> {
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _categoryController = TextEditingController();
+  final TextEditingController _priceController = TextEditingController();
+  final TextEditingController _descriptionController = TextEditingController();
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,15 +26,17 @@ class _AddProductPageState extends State<AddProductPage> {
           leading: const Icon(Icons.arrow_back_ios),
           title: const Text("Search Product"),
         ),
-        body: const Form(
+        body: Form(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
-              CustomTextField(),
-              CustomTextField(),
-              CustomTextField(),
+              CustomTextField(label: "Name",controller:_nameController ,maxLines: 1,minLines: 1,),
+              CustomTextField(label: "Category",controller:_categoryController ,maxLines: 1,minLines: 1,),
+              CustomTextField(label: "price",controller:_priceController ,maxLines: 1,minLines: 1,),
+              CustomTextField(label: "Description",controller:_descriptionController ,maxLines: 5,minLines: 1,),
+
             ],
           ),
         ),
