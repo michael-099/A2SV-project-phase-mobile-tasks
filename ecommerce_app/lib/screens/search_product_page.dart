@@ -8,7 +8,15 @@ class SearchProductPage extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           leading: const Icon(Icons.arrow_back_ios),
-          title: const Text("Search Product"),
+          title: const Align(
+              alignment: Alignment.center,
+              child: Text(
+                "Search product",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                ),
+              )),
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),

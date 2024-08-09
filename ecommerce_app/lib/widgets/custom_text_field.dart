@@ -6,13 +6,15 @@ class CustomTextField extends StatefulWidget {
   final TextEditingController controller;
   final int minLines;
   final int maxLines;
+  final Icon? suffixIcon;
 
   const CustomTextField(
       {super.key,
       required this.label,
       required this.controller,
       required this.maxLines,
-      required this.minLines});
+      required this.minLines,
+      this.suffixIcon});
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -37,11 +39,13 @@ class _CustomTextFieldState extends State<CustomTextField> {
           minLines: widget.minLines,
           maxLines: widget.maxLines,
           controller: widget.controller,
-          decoration: const InputDecoration(
-              focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.blue),
-              ),
-              border: OutlineInputBorder()),
+          decoration: InputDecoration(
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.blue),
+            ),
+            border: OutlineInputBorder(),
+            suffixIcon: widget.suffixIcon,
+          ),
           style: const TextStyle(),
         ),
       ],

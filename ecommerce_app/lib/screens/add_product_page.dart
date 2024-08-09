@@ -23,7 +23,15 @@ class _AddProductPageState extends State<AddProductPage> {
       home: Scaffold(
         appBar: AppBar(
           leading: const Icon(Icons.arrow_back_ios),
-          title: const Text("Search Product"),
+          title: Align(
+              alignment: Alignment.center,
+              child: const Text(
+                "Add product",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                ),
+              )),
         ),
         body: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -50,6 +58,7 @@ class _AddProductPageState extends State<AddProductPage> {
                   controller: _priceController,
                   maxLines: 1,
                   minLines: 1,
+                  suffixIcon: Icon(Icons.monetization_on_outlined),
                 ),
                 CustomTextField(
                   label: "Description",
