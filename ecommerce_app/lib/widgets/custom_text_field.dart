@@ -39,11 +39,13 @@ class _CustomTextFieldState extends State<CustomTextField> {
           minLines: widget.minLines,
           maxLines: widget.maxLines,
           controller: widget.controller,
+          
           decoration: InputDecoration(
-            focusedBorder: OutlineInputBorder(
+            
+            focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.blue),
             ),
-            border: OutlineInputBorder(),
+            border: const OutlineInputBorder(),
             suffixIcon: widget.suffixIcon,
           ),
           style: const TextStyle(),
