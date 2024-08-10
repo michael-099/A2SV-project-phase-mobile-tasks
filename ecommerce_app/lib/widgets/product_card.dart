@@ -23,6 +23,7 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return IntrinsicWidth(
       child: Card(
+        color: Colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
         ),

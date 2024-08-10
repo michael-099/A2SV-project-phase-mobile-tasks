@@ -7,7 +7,8 @@ class TopBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Card(
+    return const SizedBox(
+      width: 366,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -22,7 +23,7 @@ class TopBar extends StatelessWidget {
                     "time-time-time",
                     textAlign: TextAlign.start,
                     style: TextStyle(
-                      // backgroundColor: Colors.amber,
+                        // backgroundColor: Colors.amber,
                         fontSize: 12,
                         fontWeight: FontWeight.w300,
                         color: Colors.black38),
@@ -33,7 +34,7 @@ class TopBar extends StatelessWidget {
                         "Hello, ",
                         textAlign: TextAlign.start,
                         style: TextStyle(
-                          // backgroundColor: Colors.blue,
+                            // backgroundColor: Colors.blue,
                             fontSize: 14,
                             fontWeight: FontWeight.w700,
                             color: Colors.black38),
@@ -52,9 +53,17 @@ class TopBar extends StatelessWidget {
               ),
             ],
           ),
-          Icon(
-            Icons.notifications_active_outlined,
-          ),
+          Card(
+            color: Colors.white70,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(5))),
+            child: Padding(
+              padding: EdgeInsets.all(5.0),
+              child: Icon(
+                Icons.notifications_active_outlined,
+              ),
+            ),
+          )
         ],
       ),
     );
