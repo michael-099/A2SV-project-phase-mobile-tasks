@@ -54,7 +54,7 @@ class TopBar extends StatelessWidget {
             ],
           ),
           Card(
-            color: Colors.white70,
+            color: Colors.white,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(5))),
             child: Padding(
