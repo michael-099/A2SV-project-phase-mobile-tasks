@@ -1,22 +1,27 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class TopBar extends StatelessWidget {
   const TopBar({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
+    return SizedBox(
       width: 366,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             children: [
-              CircleAvatar(),
-              SizedBox(width: 10),
-              Column(
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  color: Colors.purple[100],
+                ),
+              ),
+              const SizedBox(width: 10),
+              const Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
@@ -53,7 +58,7 @@ class TopBar extends StatelessWidget {
               ),
             ],
           ),
-          Card(
+          const Card(
             color: Colors.white,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(5))),

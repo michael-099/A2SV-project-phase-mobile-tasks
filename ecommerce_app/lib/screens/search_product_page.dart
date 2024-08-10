@@ -56,7 +56,7 @@ class _SearchProductPageState extends State<SearchProductPage> {
                             style: const TextStyle(),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         SizedBox(
@@ -70,7 +70,7 @@ class _SearchProductPageState extends State<SearchProductPage> {
                             ),
                           
                             onPressed: () {},
-                            child: Icon(Icons.line_style_outlined),
+                            child: const Icon(Icons.line_style_outlined),
                           ),
                         ),
                       ],

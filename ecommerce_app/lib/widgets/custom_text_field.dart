@@ -16,7 +16,7 @@ class CustomTextField extends StatefulWidget {
       required this.maxLines,
       required this.minLines,
       this.suffixIcon,
-      this.width=double.infinity});
+      this.width = double.infinity});
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -47,10 +47,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
             decoration: InputDecoration(
               suffixIcon: widget.suffixIcon,
               border: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(16.0))),
+                  borderRadius: BorderRadius.all(Radius.circular(8.0))),
               focusedBorder: const OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.blue),
-                borderRadius: BorderRadius.all(Radius.circular(160.0)),
               ),
             ),
             style: const TextStyle(),

@@ -12,9 +12,13 @@ class HomePage extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
-              SizedBox(height: 40,),
+              const SizedBox(
+                height: 40,
+              ),
               const TopBar(),
-               SizedBox(height: 30,),
+              const SizedBox(
+                height: 30,
+              ),
               const SizedBox(
                 width: 366,
                 child: Row(
@@ -72,7 +76,8 @@ class HomePage extends StatelessWidget {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          shape :RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
           onPressed: () {},
           backgroundColor: const Color.fromARGB(255, 0, 125, 227),
           child: const Text(
@@ -82,7 +87,6 @@ class HomePage extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-        
         ),
       ),
     );
