@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:number_paginator/number_paginator.dart';
+
+
 
 import '../widgets/product_description.dart';
 import '../widgets/product_name_and_price.dart';
@@ -15,6 +18,7 @@ class DetailsPage extends StatelessWidget {
         body: Column(
           children: [
             Image.asset("lib/assets/images/image.png"),
+            
             ProductDescription(label: "mens shoe", rating: "4.0"),
             ProductNameAndPrice(productName: "Derby Leather", price: "\$120"),
             Padding(
