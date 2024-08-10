@@ -32,8 +32,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           child: Text(
             widget.label,
             style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.blueGrey,
+              color: Colors.black54,
             ),
           ),
         ),
@@ -45,9 +44,12 @@ class _CustomTextFieldState extends State<CustomTextField> {
             maxLines: widget.maxLines,
             controller: widget.controller,
             decoration: InputDecoration(
+              fillColor: const Color.fromARGB(26, 200, 178, 178),
+              filled: true,
               suffixIcon: widget.suffixIcon,
               border: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                  borderSide: BorderSide.none),
               focusedBorder: const OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.blue),
               ),

@@ -62,7 +62,7 @@ class _AddProductPageState extends State<AddProductPage> {
                       controller: _priceController,
                       maxLines: 1,
                       minLines: 1,
-                      suffixIcon: const Icon(Icons.monetization_on_outlined),
+                      suffixIcon: const Icon(Icons.attach_money_outlined,color: Colors.black45,),
                     ),
                     CustomTextField(
                       label: "Description",
