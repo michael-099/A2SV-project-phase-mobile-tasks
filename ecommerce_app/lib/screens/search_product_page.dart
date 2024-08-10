@@ -29,82 +29,89 @@ class _SearchProductPageState extends State<SearchProductPage> {
             ),
           ),
         ),
-        body: Stack(
-          children: [
-            Column(
-              children: [
-                SizedBox(
-                  width: 366,
-                  child: Row(
-                    // crossAxisAlignment: CrossAxisAlignment.center,
-                    // mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-
-                      SizedBox(
-                        width: 300,
-                        child: CustomTextField(
-                          label: "",
-                          controller: _searchController,
-                          maxLines: 1,
-                          minLines: 1,
-                          suffixIcon: Icon(Icons.arrow_forward),
+        body: Center(
+          child: Stack(
+            children: [
+              Column(
+                children: [
+                  SizedBox(
+                    width: 366,
+                    child: Row(
+                      // crossAxisAlignment: CrossAxisAlignment.center,
+                      // mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          width: 290,
+                          height: 40,
+                          child: TextField(
+                            controller: _searchController,
+                            decoration: const InputDecoration(
+                              suffixIcon: Icon(Icons.arrow_forward),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(8.0),
+                                ),
+                              ),
+                            ),
+                            style: const TextStyle(),
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 40,
-                        width: 66,
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(5,10,0,0),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        SizedBox(
+                          height: 40,
+                          width: 66,
                           child: FilledButton(
                             style: FilledButton.styleFrom(
+                              backgroundColor: Colors.blue,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(8)),
                             ),
+                          
                             onPressed: () {},
-                            child: Container(
-                              child: const Icon(Icons.line_style_outlined),
-                            ),
+                            child: Icon(Icons.line_style_outlined),
                           ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        ProductCard(
-                          productName: "Derby Leather Shoes",
-                          price: "\$200",
-                          label: "Men's shoe",
-                          rating: "4.5",
-                        ),
-                        ProductCard(
-                          productName: "Derby Leather Shoes",
-                          price: "\$200",
-                          label: "Men's shoe",
-                          rating: "4.5",
-                        ),
-                        ProductCard(
-                          productName: "Derby Leather Shoes",
-                          price: "\$200",
-                          label: "Men's shoe",
-                          rating: "4.5",
                         ),
                       ],
                     ),
                   ),
-                ),
-              ],
-            ),
-            Positioned(
-              left: 0,
-              right: 0,
-              bottom: 0,
-              child: FilterProdactWidget(),
-            ),
-          ],
+                  Expanded(
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          ProductCard(
+                            productName: "Derby Leather Shoes",
+                            price: "\$200",
+                            label: "Men's shoe",
+                            rating: "4.5",
+                          ),
+                          ProductCard(
+                            productName: "Derby Leather Shoes",
+                            price: "\$200",
+                            label: "Men's shoe",
+                            rating: "4.5",
+                          ),
+                          ProductCard(
+                            productName: "Derby Leather Shoes",
+                            price: "\$200",
+                            label: "Men's shoe",
+                            rating: "4.5",
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Positioned(
+                left: 0,
+                right: 0,
+                bottom: 0,
+                child: FilterProdactWidget(),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -8,9 +8,9 @@ import 'screens/details_page.dart';
 void main() {
   runApp(
     // HomePage()
-    // DetailsPage()
+    DetailsPage()
     // AddProductPage(),
-    SearchProductPage()
+    // SearchProductPage()
     
   );
 }
