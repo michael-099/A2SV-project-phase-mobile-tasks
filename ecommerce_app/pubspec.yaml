@@ -30,12 +30,19 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  number_paginator: 0.4.1 
+  number_paginator: 0.4.1
+  cupertino_icons: ^1.0.6
+  dartz: ^0.10.1
+  equatable: ^2.0.3
+  flutter_bloc: ^8.0.1
+  get_it: ^7.2.0
+  http: ^1.2.2
+  rxdart: ^0.28.0
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.6
+  
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +54,11 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
+  bloc_test: ^9.0.2
+  build_runner: ^2.1.2
+  mockito: ^5.0.15
+  mocktail: ^1.0.4
+  
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
