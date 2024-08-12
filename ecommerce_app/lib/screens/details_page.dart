@@ -11,57 +11,71 @@ class DetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-        body: Column(
-          children: [
-            Image.asset("lib/assets/images/image.png"),
-            ProductDescription(label: "mens shoe", rating: "4.0"),
-            ProductNameAndPrice(productName: "Derby Leather", price: "\$120"),
-            CustomNumberPaginator(),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                "A derby leather shoe is a classic and versatile footwear option characterized by its open lacing system, where the shoelace eyelets are sewn on top of the vamp (the upper part of the shoe). This design feature provides a more relaxed and casual look compared to the closed lacing system of oxford shoes. Derby shoes are typically made of high-quality leather, known for its durability and elegance, making them suitable for both formal and casual occasions. With their timeless style and comfortable fit, derby leather shoes are a staple in any well-rounded wardrobe.",
+    return Scaffold(
+      body: Column(
+        children: [
+          Stack(
+            children: [
+              Image.asset("lib/assets/images/image.png"),
+              Positioned(
+                top: 10,
+                left: 10,
+                child: GestureDetector(
+                  child: const Icon(Icons.arrow_back_ios),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                ),
               ),
+            ],
+          ),
+          ProductDescription(label: "mens shoe", rating: "4.0"),
+          ProductNameAndPrice(productName: "Derby Leather", price: "\$120"),
+          CustomNumberPaginator(),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              "A derby leather shoe is a classic and versatile footwear option characterized by its open lacing system, where the shoelace eyelets are sewn on top of the vamp (the upper part of the shoe). This design feature provides a more relaxed and casual look compared to the closed lacing system of oxford shoes. Derby shoes are typically made of high-quality leather, known for its durability and elegance, making them suitable for both formal and casual occasions. With their timeless style and comfortable fit, derby leather shoes are a staple in any well-rounded wardrobe.",
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                SizedBox(
-                  height: 40,
-                  width: 150,
-                  child: FilledButton(
-                    onPressed: () {},
-                    child: const Text("Add"),
-                    style: FilledButton.styleFrom(
-                      side: const BorderSide(color: Colors.blue),
-                      foregroundColor: Colors.white,
-                      backgroundColor: Colors.blue,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5.0),
-                      ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              SizedBox(
+                height: 40,
+                width: 150,
+                child: FilledButton(
+                  onPressed: () {},
+                  child: const Text("Add"),
+                  style: FilledButton.styleFrom(
+                    side: const BorderSide(color: Colors.blue),
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.blue,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 40,
-                  width: 150,
-                  child: OutlinedButton(
-                    onPressed: () {},
-                    child: const Text("Delete"),
-                    style: OutlinedButton.styleFrom(
-                      side: const BorderSide(color: Colors.red),
-                      foregroundColor: Colors.red,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5.0),
-                      ),
+              ),
+              SizedBox(
+                height: 40,
+                width: 150,
+                child: OutlinedButton(
+                  onPressed: () {},
+                  child: const Text("Delete"),
+                  style: OutlinedButton.styleFrom(
+                    side: const BorderSide(color: Colors.red),
+                    foregroundColor: Colors.red,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
                 ),
-              ],
-            )
-          ],
-        ),
+              ),
+            ],
+          )
+        ],
+      ),
     );
   }
 }
@@ -73,12 +87,9 @@ class CustomNumberPaginator extends StatefulWidget {
   _CustomNumberPaginatorState createState() => _CustomNumberPaginatorState();
 }
 
-
-
 class _CustomNumberPaginatorState extends State<CustomNumberPaginator> {
   int _currentPage = 0;
   late NumberPaginatorController _controller;
-
 
   @override
   void initState() {
