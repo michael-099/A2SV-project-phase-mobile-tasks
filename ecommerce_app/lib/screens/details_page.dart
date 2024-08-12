@@ -74,6 +74,7 @@ class CustomNumberPaginator extends StatefulWidget {
 }
 
 
+
 class _CustomNumberPaginatorState extends State<CustomNumberPaginator> {
   int _currentPage = 0;
   late NumberPaginatorController _controller;
