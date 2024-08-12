@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 
 import '../widgets/custom_text_field.dart';
 import '../widgets/upload_file.dart';
@@ -31,7 +29,7 @@ class _AddProductPageState extends State<AddProductPage> {
         title: const Align(
             alignment: Alignment.center,
             child: Text(
-              "Add product",
+              'Add product',
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w700,
@@ -50,19 +48,19 @@ class _AddProductPageState extends State<AddProductPage> {
                     height: 40,
                   ),
                   CustomTextField(
-                    label: "Name",
+                    label: 'Name',
                     controller: _nameController,
                     maxLines: 1,
                     minLines: 1,
                   ),
                   CustomTextField(
-                    label: "Category",
+                    label: 'Category',
                     controller: _categoryController,
                     maxLines: 1,
                     minLines: 1,
                   ),
                   CustomTextField(
-                    label: "price",
+                    label: 'price',
                     controller: _priceController,
                     maxLines: 1,
                     minLines: 1,
@@ -72,7 +70,7 @@ class _AddProductPageState extends State<AddProductPage> {
                     ),
                   ),
                   CustomTextField(
-                    label: "Description",
+                    label: 'Description',
                     controller: _descriptionController,
                     maxLines: 5,
                     minLines: 1,
@@ -85,7 +83,6 @@ class _AddProductPageState extends State<AddProductPage> {
                     width: double.infinity,
                     child: FilledButton(
                       onPressed: () {},
-                      child: const Text("Add"),
                       style: FilledButton.styleFrom(
                         side: const BorderSide(color: Colors.blue),
                         foregroundColor: Colors.white,
@@ -94,6 +91,7 @@ class _AddProductPageState extends State<AddProductPage> {
                           borderRadius: BorderRadius.circular(5.0),
                         ),
                       ),
+                      child: const Text('Add'),
                     ),
                   ),
                   const SizedBox(
@@ -104,7 +102,6 @@ class _AddProductPageState extends State<AddProductPage> {
                     width: double.infinity,
                     child: OutlinedButton(
                       onPressed: () {},
-                      child: const Text("Delete"),
                       style: OutlinedButton.styleFrom(
                         side: const BorderSide(color: Colors.red),
                         foregroundColor: Colors.red,
@@ -112,6 +109,7 @@ class _AddProductPageState extends State<AddProductPage> {
                           borderRadius: BorderRadius.circular(5.0),
                         ),
                       ),
+                      child: const Text('Delete'),
                     ),
                   ),
                 ],

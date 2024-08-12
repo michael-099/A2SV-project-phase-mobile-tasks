@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class UploadFile extends StatelessWidget {
   const UploadFile({super.key});
@@ -24,7 +23,7 @@ class UploadFile extends StatelessWidget {
               color: Colors.black38,
             ),
             Text(
-              "upload image",
+              'upload image',
               style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w600,

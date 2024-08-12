@@ -16,7 +16,7 @@ class TopBar extends StatelessWidget {
                 width: 40,
                 height: 40,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  borderRadius: const BorderRadius.all(Radius.circular(10)),
                   color: Colors.purple[100],
                 ),
               ),
@@ -25,7 +25,7 @@ class TopBar extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    "time-time-time",
+                    'time-time-time',
                     textAlign: TextAlign.start,
                     style: TextStyle(
                         // backgroundColor: Colors.amber,
@@ -36,7 +36,7 @@ class TopBar extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "Hello, ",
+                        'Hello, ',
                         textAlign: TextAlign.start,
                         style: TextStyle(
                             // backgroundColor: Colors.blue,
@@ -45,7 +45,7 @@ class TopBar extends StatelessWidget {
                             color: Colors.black38),
                       ),
                       Text(
-                        "Michael",
+                        'Michael',
                         textAlign: TextAlign.start,
                         style: TextStyle(
                             fontSize: 18,

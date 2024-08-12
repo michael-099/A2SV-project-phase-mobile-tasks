@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:number_paginator/number_paginator.dart';
 
@@ -16,7 +14,7 @@ class DetailsPage extends StatelessWidget {
         children: [
           Stack(
             children: [
-              Image.asset("lib/assets/images/image.png"),
+              Image.asset('lib/assets/images/image.png'),
               Positioned(
                 top: 10,
                 left: 10,
@@ -29,13 +27,13 @@ class DetailsPage extends StatelessWidget {
               ),
             ],
           ),
-          ProductDescription(label: "mens shoe", rating: "4.0"),
-          ProductNameAndPrice(productName: "Derby Leather", price: "\$120"),
-          CustomNumberPaginator(),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
+          const ProductDescription(label: 'mens shoe', rating: '4.0'),
+          const ProductNameAndPrice(productName: 'Derby Leather', price: '\$120'),
+          const CustomNumberPaginator(),
+          const Padding(
+            padding: EdgeInsets.all(16.0),
             child: Text(
-              "A derby leather shoe is a classic and versatile footwear option characterized by its open lacing system, where the shoelace eyelets are sewn on top of the vamp (the upper part of the shoe). This design feature provides a more relaxed and casual look compared to the closed lacing system of oxford shoes. Derby shoes are typically made of high-quality leather, known for its durability and elegance, making them suitable for both formal and casual occasions. With their timeless style and comfortable fit, derby leather shoes are a staple in any well-rounded wardrobe.",
+              'A derby leather shoe is a classic and versatile footwear option characterized by its open lacing system, where the shoelace eyelets are sewn on top of the vamp (the upper part of the shoe). This design feature provides a more relaxed and casual look compared to the closed lacing system of oxford shoes. Derby shoes are typically made of high-quality leather, known for its durability and elegance, making them suitable for both formal and casual occasions. With their timeless style and comfortable fit, derby leather shoes are a staple in any well-rounded wardrobe.',
             ),
           ),
           Row(
@@ -46,7 +44,6 @@ class DetailsPage extends StatelessWidget {
                 width: 150,
                 child: FilledButton(
                   onPressed: () {},
-                  child: const Text("Add"),
                   style: FilledButton.styleFrom(
                     side: const BorderSide(color: Colors.blue),
                     foregroundColor: Colors.white,
@@ -55,6 +52,7 @@ class DetailsPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
+                  child: const Text('Add'),
                 ),
               ),
               SizedBox(
@@ -62,7 +60,6 @@ class DetailsPage extends StatelessWidget {
                 width: 150,
                 child: OutlinedButton(
                   onPressed: () {},
-                  child: const Text("Delete"),
                   style: OutlinedButton.styleFrom(
                     side: const BorderSide(color: Colors.red),
                     foregroundColor: Colors.red,
@@ -70,6 +67,7 @@ class DetailsPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
+                  child: const Text('Delete'),
                 ),
               ),
             ],
@@ -114,11 +112,11 @@ class _CustomNumberPaginatorState extends State<CustomNumberPaginator> {
         buttonUnselectedBackgroundColor: Colors.white,
         buttonShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.0),
-          side: BorderSide(color: Colors.blue),
+          side: const BorderSide(color: Colors.blue),
         ),
         height:
             65, // Making the buttons square by setting equal width and height
-        contentPadding: EdgeInsets.symmetric(horizontal: 4.0),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 4.0),
       ),
       showPrevButton: false, // Remove the previous button
       showNextButton: false, // Remove the next button

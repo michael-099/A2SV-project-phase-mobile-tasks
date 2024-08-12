@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/product_card.dart';
-import '../widgets/top_bar.dart';
 import '../widgets/filter_prodact.dart';
-import '../widgets/custom_text_field.dart';
+import '../widgets/product_card.dart';
 
 class SearchProductPage extends StatefulWidget {
+  const SearchProductPage({super.key});
+
   @override
   _SearchProductPageState createState() => _SearchProductPageState();
 }
@@ -25,7 +25,7 @@ class _SearchProductPageState extends State<SearchProductPage> {
         ),
         title: const Center(
           child: Text(
-            "Search product",
+            'Search product',
             style: TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w700,
@@ -84,22 +84,22 @@ class _SearchProductPageState extends State<SearchProductPage> {
                     child: Column(
                       children: [
                         ProductCard(
-                          productName: "Derby Leather Shoes",
-                          price: "\$200",
+                          productName: 'Derby Leather Shoes',
+                          price: '\$200',
                           label: "Men's shoe",
-                          rating: "4.5",
+                          rating: '4.5',
                         ),
                         ProductCard(
-                          productName: "Derby Leather Shoes",
-                          price: "\$200",
+                          productName: 'Derby Leather Shoes',
+                          price: '\$200',
                           label: "Men's shoe",
-                          rating: "4.5",
+                          rating: '4.5',
                         ),
                         ProductCard(
-                          productName: "Derby Leather Shoes",
-                          price: "\$200",
+                          productName: 'Derby Leather Shoes',
+                          price: '\$200',
                           label: "Men's shoe",
-                          rating: "4.5",
+                          rating: '4.5',
                         ),
                       ],
                     ),

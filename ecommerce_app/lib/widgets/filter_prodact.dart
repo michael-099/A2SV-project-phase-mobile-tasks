@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import "custom_text_field.dart";
+import 'custom_text_field.dart';
 
 class FilterProdactWidget extends StatelessWidget {
   FilterProdactWidget({super.key});
@@ -19,7 +19,7 @@ class FilterProdactWidget extends StatelessWidget {
               height: 10,
             ),
             CustomTextField(
-              label: "category",
+              label: 'category',
               maxLines: 1,
               minLines: 1,
               controller: _categoryController,
@@ -31,7 +31,6 @@ class FilterProdactWidget extends StatelessWidget {
               width: double.infinity,
               child: FilledButton(
                 onPressed: () {},
-                child: const Text("Apply"),
                 style: FilledButton.styleFrom(
                   side: const BorderSide(color: Colors.blue),
                   foregroundColor: Colors.white,
@@ -40,6 +39,7 @@ class FilterProdactWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5.0),
                   ),
                 ),
+                child: const Text('Apply'),
               ),
             ),
           ],
@@ -69,8 +69,8 @@ class _SliderState extends State<Slider> {
         const Align(
           alignment: Alignment.topLeft,
           child: Text(
-            "price",
-            style: const TextStyle(
+            'price',
+            style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.blueGrey,
             ),

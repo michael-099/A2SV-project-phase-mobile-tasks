@@ -1,7 +1,7 @@
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
 
-import "product_description.dart";
-import "product_name_and_price.dart";
+import 'product_description.dart';
+import 'product_name_and_price.dart';
 
 class ProductCard extends StatelessWidget {
   String productName;
@@ -11,7 +11,7 @@ class ProductCard extends StatelessWidget {
   // double width;
   // double height;
 
-  ProductCard({
+  ProductCard({super.key, 
     required this.productName,
     required this.price,
     required this.label,
@@ -41,7 +41,7 @@ class ProductCard extends StatelessWidget {
                   topRight: Radius.circular(16.0),
                 ),
                 child: Image.asset(
-                  "lib/assets/images/image.png",
+                  'lib/assets/images/image.png',
                   // "lib/assets/images/bag.jpg",
                   fit: BoxFit.cover,
                   height: 160,

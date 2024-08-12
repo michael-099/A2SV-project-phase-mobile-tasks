@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 
 class CustomTextField extends StatefulWidget {
   final String label;
@@ -7,9 +6,9 @@ class CustomTextField extends StatefulWidget {
   final int minLines;
   final int maxLines;
   final Icon? suffixIcon;
-  double width;
+  final double width;
 
-  CustomTextField(
+  const CustomTextField(
       {super.key,
       required this.label,
       required this.controller,

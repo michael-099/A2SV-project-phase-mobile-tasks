@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 import '../widgets/product_card.dart';
 import '../widgets/top_bar.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
@@ -24,7 +26,7 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    "Avilable Products",
+                    'Avilable Products',
                     style: TextStyle(
                       fontSize: 17,
                       fontWeight: FontWeight.w700,
@@ -40,7 +42,7 @@ class HomePage extends StatelessWidget {
                       padding: const EdgeInsets.all(5.0),
                       child: GestureDetector(
                           onTap: () {
-                            Navigator.pushNamed(context, "/searchProduct");
+                            Navigator.pushNamed(context, '/searchProduct');
                           },
                           child: const Icon(Icons.search_rounded)),
                     ),
@@ -57,22 +59,22 @@ class HomePage extends StatelessWidget {
                   children: [
                     
                     ProductCard(
-                      productName: "Derby Leather Shoes",
-                      price: "\$200",
+                      productName: 'Derby Leather Shoes',
+                      price: '\$200',
                       label: "Men's shoe",
-                      rating: "4.5",
+                      rating: '4.5',
                     ),
                     ProductCard(
-                      productName: "Derby Leather Shoes",
-                      price: "\$200",
+                      productName: 'Derby Leather Shoes',
+                      price: '\$200',
                       label: "Men's shoe",
-                      rating: "4.5",
+                      rating: '4.5',
                     ),
                     ProductCard(
-                      productName: "Derby Leather Shoes",
-                      price: "\$200",
+                      productName: 'Derby Leather Shoes',
+                      price: '\$200',
                       label: "Men's shoe",
-                      rating: "4.5",
+                      rating: '4.5',
                     ),
                   ],
                 ),
@@ -84,11 +86,11 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
         onPressed: () {
-          Navigator.pushNamed(context, "/addProduct");
+          Navigator.pushNamed(context, '/addProduct');
         },
         backgroundColor: const Color.fromARGB(255, 0, 125, 227),
         child: const Text(
-          "+",
+          '+',
           style: TextStyle(
             fontSize: 40,
             color: Colors.white,
