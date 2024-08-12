@@ -21,32 +21,37 @@ class ProductCard extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    return IntrinsicWidth(
-      child: Card(
-        color: Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16.0),
-        ),
-        // elevation: 50,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ClipRRect(
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(16.0),
-                topRight: Radius.circular(16.0),
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, '/details');
+      },
+      child: IntrinsicWidth(
+        child: Card(
+          color: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16.0),
+          ),
+          // elevation: 50,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ClipRRect(
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(16.0),
+                  topRight: Radius.circular(16.0),
+                ),
+                child: Image.asset(
+                  "lib/assets/images/image.png",
+                  // "lib/assets/images/bag.jpg",
+                  fit: BoxFit.cover,
+                  height: 160,
+                  width: 366,
+                ),
               ),
-              child: Image.asset(
-                "lib/assets/images/image.png",
-                // "lib/assets/images/bag.jpg",
-                fit: BoxFit.cover,
-                height: 160,
-                width: 366,
-              ),
-            ),
-            ProductNameAndPrice(productName: productName, price: price),
-            ProductDescription(label: label, rating: rating),
-          ],
+              ProductNameAndPrice(productName: productName, price: price),
+              ProductDescription(label: label, rating: rating),
+            ],
+          ),
         ),
       ),
     );

@@ -18,12 +18,12 @@ class HomePage extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            const SizedBox(
+            SizedBox(
               width: 366,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     "Avilable Products",
                     style: TextStyle(
                       fontSize: 17,
@@ -34,11 +34,15 @@ class HomePage extends StatelessWidget {
                   ),
                   Card(
                     color: Colors.white,
-                    shape: RoundedRectangleBorder(
+                    shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(5))),
                     child: Padding(
-                      padding: EdgeInsets.all(5.0),
-                      child: Icon(Icons.search_rounded),
+                      padding: const EdgeInsets.all(5.0),
+                      child: GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, "/searchProduct");
+                          },
+                          child: const Icon(Icons.search_rounded)),
                     ),
                   )
                 ],
@@ -48,7 +52,9 @@ class HomePage extends StatelessWidget {
               height: 600,
               child: SingleChildScrollView(
                 child: Column(
+
                   children: [
+                    
                     ProductCard(
                       productName: "Derby Leather Shoes",
                       price: "\$200",
@@ -76,7 +82,9 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, "/addProduct");
+        },
         backgroundColor: const Color.fromARGB(255, 0, 125, 227),
         child: const Text(
           "+",

@@ -13,7 +13,7 @@ void main() {
         "/": (context) => HomePage(),
         "/details": (context) => DetailsPage(),
         "/addProduct": (context) => AddProductPage(),
-        "/SearchProduct": (context) => SearchProductPage(),
+        "/searchProduct": (context) => SearchProductPage(),
       },
     ),
   );
