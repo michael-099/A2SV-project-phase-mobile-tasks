@@ -11,8 +11,7 @@ class DetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return  Scaffold(
         body: Column(
           children: [
             Image.asset("lib/assets/images/image.png"),
@@ -63,7 +62,7 @@ class DetailsPage extends StatelessWidget {
             )
           ],
         ),
-      ),
+      
     );
   }
 }

@@ -15,8 +15,7 @@ class _SearchProductPageState extends State<SearchProductPage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           leading: const Icon(Icons.arrow_back_ios),
           title: const Center(
@@ -113,7 +112,7 @@ class _SearchProductPageState extends State<SearchProductPage> {
             ],
           ),
         ),
-      ),
+      
     );
   }
 }

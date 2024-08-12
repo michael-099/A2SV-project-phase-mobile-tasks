@@ -7,10 +7,14 @@ import 'screens/details_page.dart';
 
 void main() {
   runApp(
-    // HomePage()
-    // DetailsPage()
-    AddProductPage(),
-    // SearchProductPage()
-    
+    MaterialApp(
+      initialRoute: "/",
+      routes: {
+        "/": (context) => HomePage(),
+        "/details": (context) => DetailsPage(),
+        "/addProduct": (context) => AddProductPage(),
+        "/SearchProduct": (context) => SearchProductPage(),
+      },
+    ),
   );
 }
