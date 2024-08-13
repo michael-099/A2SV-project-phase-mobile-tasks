@@ -1,14 +1,11 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
-class Product {
-  String id;
-  String name;
-  String description;
-  double price;
-  String url;
+import 'package:equatable/equatable.dart';
+import 'package:meta/meta.dart';
+class Product extends Equatable {
+  final String id;
+  final String name;
+  final String description;
+  final double price;
+  final String url;
 
   Product({
     required this.id,
@@ -17,4 +14,17 @@ class Product {
     required this.price,
     required this.url,
   });
+
+  List<Object?> get props => [
+        name,
+        id,
+        description,
+        price,
+        url,
+      ];
+
+  //  the above code List<Object?> get props ... implements the Equatable package.
+  //Specifically, the props getter is used
+  //to define the properties that should be compared
+  //when checking for object equality.
 }
