@@ -9,7 +9,6 @@ class AddProduct {
   final ProductRepository repository;
 
   AddProduct(this.repository);
-
   Future<Either<Failure, Product>> execute({required Product product}) 
   async {
     return await repository.addProduct(product);
