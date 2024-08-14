@@ -1,0 +1,143 @@
+[
+    {
+      "id": "01",
+      "name": "Smartphone X",
+      "description": "A high-end smartphone with a great camera",
+      "price": 799.99,
+      "url": "https://example.com/products/smartphone-x"
+    },
+    {
+      "id": "02",
+      "name": "Laptop Pro",
+      "description": "A powerful laptop for professionals",
+      "price": 1299.99,
+      "url": "https://example.com/products/laptop-pro"
+    },
+    {
+      "id": "03",
+      "name": "Wireless Headphones",
+      "description": "Noise-cancelling over-ear headphones",
+      "price": 199.99,
+      "url": "https://example.com/products/wireless-headphones"
+    },
+    {
+      "id": "04",
+      "name": "Smartwatch",
+      "description": "A smartwatch with fitness tracking features",
+      "price": 249.99,
+      "url": "https://example.com/products/smartwatch"
+    },
+    {
+      "id": "05",
+      "name": "4K TV",
+      "description": "A large 4K Ultra HD television",
+      "price": 999.99,
+      "url": "https://example.com/products/4k-tv"
+    },
+    {
+      "id": "06",
+      "name": "Bluetooth Speaker",
+      "description": "Portable speaker with high-quality sound",
+      "price": 89.99,
+      "url": "https://example.com/products/bluetooth-speaker"
+    },
+    {
+      "id": "07",
+      "name": "Gaming Console",
+      "description": "Next-gen gaming console with immersive graphics",
+      "price": 499.99,
+      "url": "https://example.com/products/gaming-console"
+    },
+    {
+      "id": "08",
+      "name": "Smart Thermostat",
+      "description": "Energy-saving thermostat with remote control",
+      "price": 149.99,
+      "url": "https://example.com/products/smart-thermostat"
+    },
+    {
+      "id": "09",
+      "name": "Wireless Mouse",
+      "description": "Ergonomic wireless mouse with long battery life",
+      "price": 49.99,
+      "url": "https://example.com/products/wireless-mouse"
+    },
+    {
+      "id": "10",
+      "name": "Fitness Tracker",
+      "description": "Wearable fitness tracker with heart rate monitor",
+      "price": 99.99,
+      "url": "https://example.com/products/fitness-tracker"
+    },
+    {
+      "id": "11",
+      "name": "E-Reader",
+      "description": "Lightweight e-reader with a glare-free screen",
+      "price": 129.99,
+      "url": "https://example.com/products/e-reader"
+    },
+    {
+      "id": "12",
+      "name": "Smart Light Bulb",
+      "description": "Wi-Fi enabled smart light bulb with color control",
+      "price": 29.99,
+      "url": "https://example.com/products/smart-light-bulb"
+    },
+    {
+      "id": "13",
+      "name": "Digital Camera",
+      "description": "Compact digital camera with 20MP sensor",
+      "price": 349.99,
+      "url": "https://example.com/products/digital-camera"
+    },
+    {
+      "id": "14",
+      "name": "Robot Vacuum",
+      "description": "Self-cleaning robot vacuum with smart mapping",
+      "price": 399.99,
+      "url": "https://example.com/products/robot-vacuum"
+    },
+    {
+      "id": "15",
+      "name": "Portable Charger",
+      "description": "High-capacity portable charger for mobile devices",
+      "price": 39.99,
+      "url": "https://example.com/products/portable-charger"
+    },
+    {
+      "id": "16",
+      "name": "Action Camera",
+      "description": "Waterproof action camera with 4K recording",
+      "price": 299.99,
+      "url": "https://example.com/products/action-camera"
+    },
+    {
+      "id": "17",
+      "name": "Home Security Camera",
+      "description": "Indoor security camera with night vision",
+      "price": 79.99,
+      "url": "https://example.com/products/home-security-camera"
+    },
+    {
+      "id": "18",
+      "name": "Streaming Device",
+      "description": "4K streaming device with voice remote",
+      "price": 49.99,
+      "url": "https://example.com/products/streaming-device"
+    },
+    {
+      "id": "19",
+      "name": "Noise-Cancelling Earbuds",
+      "description": "True wireless earbuds with active noise cancelling",
+      "price": 149.99,
+      "url": "https://example.com/products/noise-cancelling-earbuds"
+    },
+    {
+      "id": "20",
+      "name": "Smart Doorbell",
+      "description": "Video doorbell with motion detection and two-way audio",
+      "price": 179.99,
+      "url": "https://example.com/products/smart-doorbell"
+    }
+  ]
+  
