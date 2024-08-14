@@ -3,12 +3,11 @@ import 'package:ecommerce_app/core/error/failure.dart';
 import 'package:ecommerce_app/features/product/domain/entities/product.dart';
 import 'package:ecommerce_app/features/product/domain/repositories/product_repository.dart';
 import 'package:ecommerce_app/features/product/domain/usecases/view_all_products.dart';
-import 'package:ecommerce_app/features/product/domain/usecases/view_specific_product.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
-import 'view_specific_product_test.mocks.dart';
+import 'view_all_products_test.mocks.dart';
 
 @GenerateMocks([ProductRepository])
 void main() {
