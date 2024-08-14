@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 
 import '../../../../core/error/failure.dart';
-import '../entites/product.dart';
+import '../entities/product.dart';
 
 abstract class ProductRepository {
   Future<Either<Failure, Product>> getSpecificProduct(int id);

@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:ecommerce_app/core/error/failure.dart';
-import 'package:ecommerce_app/features/ecommerce/domain/entites/product.dart';
-import 'package:ecommerce_app/features/ecommerce/domain/repositories/product_repository.dart';
 import 'package:ecommerce_app/features/ecommerce/domain/usecases/add_a_product.dart';
+import 'package:ecommerce_app/features/product/domain/entities/product.dart';
+import 'package:ecommerce_app/features/product/domain/repositories/product_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
