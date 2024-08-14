@@ -21,7 +21,7 @@ void main() {
   });
 
   // final product = Product(id: '02', name: 'name', description: 'description', price: 120, url: 'url');
-  final int id=11;
+  final String id="11";
   test(
     'should delete product to the repository and return the created entity.',
     () async {

@@ -5,12 +5,12 @@ import '../../../../core/error/failure.dart';
 import '../entities/product.dart';
 import '../repositories/product_repository.dart';
 
-class AddProduct {
+class ViewAllProducts {
   final ProductRepository repository;
 
-  AddProduct(this.repository);
-  Future<Either<Failure, Product>> execute({required Product product}) 
+  ViewAllProducts(this.repository);
+  Future<Either<Failure, Product>> execute() 
   async {
-    return await repository.addProduct(product);
+    return await repository.viewAllProducts();
   }
 }

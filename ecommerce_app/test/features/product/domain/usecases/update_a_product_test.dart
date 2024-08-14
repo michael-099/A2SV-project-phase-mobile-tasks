@@ -7,7 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
-import 'delete_a_product_test.mocks.dart';
+import 'update_a_product_test.mocks.dart';
 
 @GenerateMocks([ProductRepository])
 void main() {
@@ -32,7 +32,7 @@ void main() {
       final result = await usecase.execute(product: product);
 
       // Assertions
-      expect(result, Right(unit));
+      expect(result, Right(product));
       verify(mockProductRepository.updateProduct(product));
       verifyNoMoreInteractions(mockProductRepository);
     },

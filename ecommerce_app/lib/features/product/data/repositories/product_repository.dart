@@ -4,7 +4,7 @@ import 'package:dartz/dartz.dart';
 
 import '../../domain/repositories/product_repository.dart';
 
-class ProductRepositoryImpl implements ProductRepository{
+abstract class ProductRepositoryImpl implements ProductRepository{
   @override
   Future<Either<Failure, Product>> addProduct(Product product) {
     // TODO: implement addProduct
@@ -12,7 +12,7 @@ class ProductRepositoryImpl implements ProductRepository{
   }
 
   @override
-  Future<Either<Failure, Unit>> deleteProduct(int id) {
+  Future<Either<Failure, Unit>> deleteProduct(String id) {
     // TODO: implement deleteProduct
     throw UnimplementedError();
   }
@@ -24,7 +24,7 @@ class ProductRepositoryImpl implements ProductRepository{
   }
 
   @override
-  Future<Either<Failure, Product>> getSpecificProduct(int id) {
+  Future<Either<Failure, Product>> getSpecificProduct(String  id) {
     // TODO: implement getSpecificProduct
     throw UnimplementedError();
   }
