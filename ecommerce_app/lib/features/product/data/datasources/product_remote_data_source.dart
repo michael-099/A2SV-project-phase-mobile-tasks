@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 
 import '../../domain/entities/product.dart';
 
-abstract class ProductLocalDataSource {
+abstract class RemoteDataSource {
   Future<Product> getSpecificProduct(int id);
   Future<List<Product>> getAllProducts();
   Future<Unit> deleteProduct(int id);
