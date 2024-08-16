@@ -21,7 +21,7 @@ void main() {
   });
 
   // final product = Product(id: '02', name: 'name', description: 'description', price: 120, url: 'url');
-  final String id="11";
+  const String id = '11';
   test(
     'should delete product to the repository and return the created entity.',
     () async {
@@ -39,7 +39,6 @@ void main() {
     },
   );
 
-
   test(
     'should return a failure when the delete repository fails',
     () async {
@@ -49,7 +48,7 @@ void main() {
       });
 
       //act
-      final result = await usecase.execute(id:id);
+      final result = await usecase.execute(id: id);
 
       //assert
       expect(result, const Left(ServerFailure('')));

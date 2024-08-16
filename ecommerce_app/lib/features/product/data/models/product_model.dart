@@ -5,7 +5,7 @@ class ProductModel extends Product {
     required id,
     required name,
     required description,
-    required price,
+    required double price,
     required url,
   }) : super(
             description: description,
@@ -18,7 +18,7 @@ class ProductModel extends Product {
       id: json['id'],
       name: json['name'],
       description: json['description'],
-      price: json['price'],
+      price: (json['price'] as num).toDouble(),
       url: json['url']);
 
   Map<String, dynamic> toJson() => {
@@ -28,4 +28,19 @@ class ProductModel extends Product {
         'price': price,
         'url': url
       };
+
+  Product toEntity() {
+    return ProductModel(
+        id: id, name: name, price: price, description: description, url: url);
+  }
+
+  factory ProductModel.fromEntity(Product entity) {
+    return ProductModel(
+      name: entity.name,
+      description: entity.description,
+      price: entity.price,
+      id: entity.id,
+      url: entity.url,
+    );
+  }
 }

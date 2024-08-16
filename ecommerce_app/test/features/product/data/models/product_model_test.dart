@@ -16,8 +16,9 @@ void main() {
   test(
     'should be a subclass of Product entity',
     () async {
+      const path = '/features/product/helper/dummy_data/dummy.json';
       final Map<String, dynamic> jsonMap =
-          json.decode(readJson('helper/dummy_data/dummy.json'));
+          json.decode(readJson(path));
       // expect(tProduct, isA<Product>());
 
       final result = ProductModel.fromJson(jsonMap);
