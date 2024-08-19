@@ -7,7 +7,7 @@ import 'dart:async' as _i6;
 
 import 'package:dartz/dartz.dart' as _i2;
 import 'package:ecommerce_app/core/error/failure.dart' as _i7;
-import 'package:ecommerce_app/core/platform/network_info.dart' as _i8;
+import 'package:ecommerce_app/core/network/network_info.dart' as _i8;
 import 'package:ecommerce_app/features/product/data/datasources/product_local_data_source.dart'
     as _i9;
 import 'package:ecommerce_app/features/product/data/datasources/product_remote_data_source.dart'
@@ -219,6 +219,17 @@ class MockLocalDataSource extends _i1.Mock implements _i9.LocalDataSource {
         returnValue:
             _i6.Future<List<_i3.ProductModel>>.value(<_i3.ProductModel>[]),
       ) as _i6.Future<List<_i3.ProductModel>>);
+
+  @override
+  _i6.Future<void> cacheAllProducts(List<_i4.Product>? products) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #cacheAllProducts,
+          [products],
+        ),
+        returnValue: _i6.Future<void>.value(),
+        returnValueForMissingStub: _i6.Future<void>.value(),
+      ) as _i6.Future<void>);
 }
 
 /// A class which mocks [RemoteDataSource].
