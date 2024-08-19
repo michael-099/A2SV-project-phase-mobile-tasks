@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../domain/entities/product.dart';
@@ -20,7 +22,7 @@ class ProductLocalDataSourceImpl implements LocalDataSource {
 
   @override
   Future<ProductModel> getLastProduct() {
-    // TODO: implement getLastProduct
-    throw UnimplementedError();
+    final String? jsonString = sharedPreferences.getString('CACHED_PRODUCT');
+    return Future.value(ProductModel.fromJson(json.decode(jsonString!)));
   }
 }
