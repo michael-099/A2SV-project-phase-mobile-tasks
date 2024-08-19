@@ -1,24 +1,26 @@
 import 'dart:convert';
 
+import 'package:ecommerce_app/features/product/data/models/product_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-import '../../domain/entities/product.dart';
-import '../models/product_model.dart';
 
 abstract class LocalDataSource {
   Future<ProductModel> getLastProduct();
-  Future<void> cacheProducts(List<Product> products);
+  Future<void> cacheProducts(List<ProductModel> products);
 }
 
 class ProductLocalDataSourceImpl implements LocalDataSource {
   final SharedPreferences sharedPreferences;
 
   ProductLocalDataSourceImpl({required this.sharedPreferences});
-  @override
-  Future<void> cacheProducts(List<Product> products) {
-    // TODO: implement cacheProducts
-    throw UnimplementedError();
-  }
+ @override
+Future<void> cacheProducts(List<ProductModel> products) {
+  final List<Map<String, dynamic>> jsonProducts = products.map((product) => product.toJson()).toList();
+  return sharedPreferences.setString(
+    "CACHED_PRODUCT",
+    json.encode(jsonProducts),
+  );
+}
+
 
   @override
   Future<ProductModel> getLastProduct() {

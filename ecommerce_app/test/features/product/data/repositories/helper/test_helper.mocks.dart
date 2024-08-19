@@ -195,36 +195,25 @@ class MockLocalDataSource extends _i1.Mock implements _i9.LocalDataSource {
   }
 
   @override
-  _i6.Future<_i3.ProductModel> viewSpecificProduct(String? id) =>
-      (super.noSuchMethod(
+  _i6.Future<_i3.ProductModel> getLastProduct() => (super.noSuchMethod(
         Invocation.method(
-          #viewSpecificProduct,
-          [id],
+          #getLastProduct,
+          [],
         ),
         returnValue: _i6.Future<_i3.ProductModel>.value(_FakeProductModel_1(
           this,
           Invocation.method(
-            #viewSpecificProduct,
-            [id],
+            #getLastProduct,
+            [],
           ),
         )),
       ) as _i6.Future<_i3.ProductModel>);
 
   @override
-  _i6.Future<List<_i3.ProductModel>> viewAllProducts() => (super.noSuchMethod(
-        Invocation.method(
-          #viewAllProducts,
-          [],
-        ),
-        returnValue:
-            _i6.Future<List<_i3.ProductModel>>.value(<_i3.ProductModel>[]),
-      ) as _i6.Future<List<_i3.ProductModel>>);
-
-  @override
-  _i6.Future<void> cacheAllProducts(List<_i4.Product>? products) =>
+  _i6.Future<void> cacheProducts(List<_i3.ProductModel>? products) =>
       (super.noSuchMethod(
         Invocation.method(
-          #cacheAllProducts,
+          #cacheProducts,
           [products],
         ),
         returnValue: _i6.Future<void>.value(),

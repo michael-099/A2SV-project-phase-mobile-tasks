@@ -56,6 +56,7 @@ class ProductRepositoryImpl extends ProductRepository {
     if (await networkInfo.isConnected) {
       try {
         final remoteProducts = await remoteDataSource.viewAllProducts();
+        // List<ProductModel> 
         localDataSource.cacheProducts(remoteProducts);
         final List<Product> productEntities = remoteProducts;
         return Right(productEntities);
