@@ -74,7 +74,7 @@ void main() {
           await productRepositoryImpl.viewAllProducts();
           //assert
           verify(mockRemoteDataSource.viewAllProducts());
-          verify(mockLocalDataSource.cacheAllProducts([testProductModel]));
+          verify(mockLocalDataSource.cacheProducts([testProductModel]));
         },
       );
       test(
@@ -250,8 +250,8 @@ void main() {
           'should return last locally cached data when the chached data is present\n',
           () async {
             //arrange
-            when(mockLocalDataSource.viewAllProducts()).thenAnswer(
-              (_) async => [testProductModel],
+            when(mockLocalDataSource.getLastProduct()).thenAnswer(
+              (_) async => testProductModel,
             );
             //act
             final result = await productRepositoryImpl.viewAllProducts();
@@ -263,7 +263,7 @@ void main() {
 
             //assert
             verifyZeroInteractions(mockRemoteDataSource);
-            verify(mockLocalDataSource.viewAllProducts());
+            verify(mockLocalDataSource.getLastProduct());
             expect(resultUnfold, containsAll([testProductEntity]));
           },
         );
@@ -273,13 +273,13 @@ void main() {
           'should return a CacheFailure when there is no cached data present\n',
           () async {
             //arrange
-            when(mockLocalDataSource.viewAllProducts())
+            when(mockLocalDataSource.getLastProduct())
                 .thenThrow(CacheException());
             //act
             final result = await productRepositoryImpl.viewAllProducts();
 
             verifyZeroInteractions(mockRemoteDataSource);
-            verify(mockLocalDataSource.viewAllProducts());
+            verify(mockLocalDataSource.getLastProduct());
             //assert
           },
         );
@@ -293,7 +293,7 @@ void main() {
           '\n should return a specifc product from the chache',
           () async {
             //arrange
-            when(mockLocalDataSource.viewSpecificProduct(testId))
+            when(mockLocalDataSource.getLastProduct())
                 .thenAnswer((_) async {
               return testProductModel;
             });
@@ -302,7 +302,7 @@ void main() {
                 await productRepositoryImpl.viewSpecificProduct(testId);
 
             verifyZeroInteractions(mockRemoteDataSource);
-            verify(mockLocalDataSource.viewSpecificProduct(testId));
+            verify(mockLocalDataSource.getLastProduct());
             expect(result, Right(testProductEntity));
             //act
             //assert
@@ -312,14 +312,14 @@ void main() {
           '\n should return cache failure if no product has been cached',
           () async {
             //arrange
-            when(mockLocalDataSource.viewSpecificProduct(testId))
+            when(mockLocalDataSource.getLastProduct())
                 .thenThrow(CacheException());
 
             final result =
                 await productRepositoryImpl.viewSpecificProduct(testId);
 
             verifyZeroInteractions(mockRemoteDataSource);
-            verify(mockLocalDataSource.viewSpecificProduct(testId));
+            verify(mockLocalDataSource.getLastProduct());
             expect(result, const Left(CacheFailure('')));
             //act
             //assert

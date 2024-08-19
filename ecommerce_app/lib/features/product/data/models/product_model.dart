@@ -42,5 +42,6 @@ class ProductModel extends Product {
       id: entity.id,
       url: entity.url,
     );
+    
   }
 }

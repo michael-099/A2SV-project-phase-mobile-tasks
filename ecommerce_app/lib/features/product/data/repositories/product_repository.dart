@@ -52,21 +52,29 @@ class ProductRepositoryImpl extends ProductRepository {
   }
 
   @override
+  @override
   Future<Either<Failure, List<Product>>> viewAllProducts() async {
     if (await networkInfo.isConnected) {
       try {
         final remoteProducts = await remoteDataSource.viewAllProducts();
-        // List<ProductModel> 
-        localDataSource.cacheProducts(remoteProducts);
-        final List<Product> productEntities = remoteProducts;
-        return Right(productEntities);
+
+        // Convert List<Product> to List<ProductModel>
+        final remoteProductModels = remoteProducts
+            .map((product) => ProductModel.fromEntity(product))
+            .toList();
+
+        // Cache the converted list
+        localDataSource.cacheProducts(remoteProductModels);
+
+        return Right(remoteProducts); // Returning the original List<Product>
       } on ServerException {
         return const Left(ServerFailure(''));
       }
     } else {
       try {
         final result = await localDataSource.getLastProduct();
-        // might make an error 
+
+        // Assuming getLastProduct returns a ProductModel
         Product res = result;
         final List<Product> productEntities = [res];
         return Right(productEntities);
