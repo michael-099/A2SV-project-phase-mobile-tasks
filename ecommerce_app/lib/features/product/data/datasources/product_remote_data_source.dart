@@ -7,12 +7,12 @@ import 'package:http_parser/http_parser.dart';
 import '../../../../core/error/exceptions.dart';
 import '../models/product_model.dart';
 
-const URL = "https://g5-flutter-learning-path-be.onrender.com/api/v1/products";
+const URL = 'https://g5-flutter-learning-path-be.onrender.com/api/v1/products';
 
 abstract class RemoteDataSource {
-  Future<ProductModel> getSpecificProduct(String id);
+  Future<ProductModel> viewSpecificProduct(String id);
 
-  Future<List<ProductModel>> getAllProducts();
+  Future<List<ProductModel>> viewAllProducts();
 
   Future<Unit> deleteProduct(String id);
 
@@ -70,16 +70,16 @@ class RemoteDataSourceImpl extends RemoteDataSource {
   }
 
   @override
-  Future<List<ProductModel>> getAllProducts() async {
+  Future<List<ProductModel>> viewAllProducts() async {
     try {
       final response = await client
-          .get(Uri.parse(URL), headers: {"Product": "application/json"});
+          .get(Uri.parse(URL), headers: {'Product': 'application/json'});
 
       if (response.statusCode == 200) {
         try {
           final responseBody = response.body;
           final decodedResponseBody = json.decode(responseBody);
-          final productsJson = decodedResponseBody["data"] as List;
+          final productsJson = decodedResponseBody['data'] as List;
           final products = productsJson
               .map((productJson) => ProductModel.fromJson(productJson))
               .toList();
@@ -96,17 +96,17 @@ class RemoteDataSourceImpl extends RemoteDataSource {
   }
 
   @override
-  Future<ProductModel> getSpecificProduct(String id) async {
+  Future<ProductModel> viewSpecificProduct(String id) async {
     try {
       final response = await client.get(
         Uri.parse('$URL/$id'),
-        headers: {"Product": "application/json"},
+        headers: {'Product': 'application/json'},
       );
       if (response.statusCode == 200) {
         try {
           final data = response.body;
           final decodedData = json.decode(data);
-          final productJson = decodedData["data"];
+          final productJson = decodedData['data'];
           return ProductModel.fromJson(productJson);
         } catch (e) {
           throw ServerException();
@@ -126,10 +126,10 @@ class RemoteDataSourceImpl extends RemoteDataSource {
 
     try {
       final response = await client.put(Uri.parse('$URL/$productId'),
-          body: jsonBody, headers: {"Product": "application/json"});
+          body: jsonBody, headers: {'Product': 'application/json'});
 
       if (response.statusCode == 200) {
-        return ProductModel.fromJson(json.decode(response.body)["data"]);
+        return ProductModel.fromJson(json.decode(response.body)['data']);
       } else {
         throw ServerException();
       }
