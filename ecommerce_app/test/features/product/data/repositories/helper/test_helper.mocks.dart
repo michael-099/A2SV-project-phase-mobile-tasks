@@ -3,10 +3,10 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i6;
+import 'dart:async' as _i5;
 
 import 'package:dartz/dartz.dart' as _i2;
-import 'package:ecommerce_app/core/error/failure.dart' as _i7;
+import 'package:ecommerce_app/core/error/failure.dart' as _i6;
 import 'package:ecommerce_app/core/network/network_info.dart' as _i8;
 import 'package:ecommerce_app/features/product/data/datasources/product_local_data_source.dart'
     as _i9;
@@ -15,9 +15,9 @@ import 'package:ecommerce_app/features/product/data/datasources/product_remote_d
 import 'package:ecommerce_app/features/product/data/models/product_model.dart'
     as _i3;
 import 'package:ecommerce_app/features/product/domain/entities/product.dart'
-    as _i4;
+    as _i7;
 import 'package:ecommerce_app/features/product/domain/repositories/product_repository.dart'
-    as _i5;
+    as _i4;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -53,18 +53,8 @@ class _FakeProductModel_1 extends _i1.SmartFake implements _i3.ProductModel {
         );
 }
 
-class _FakeProduct_2 extends _i1.SmartFake implements _i4.Product {
-  _FakeProduct_2(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
-}
-
-class _FakeUnit_3 extends _i1.SmartFake implements _i2.Unit {
-  _FakeUnit_3(
+class _FakeUnit_2 extends _i1.SmartFake implements _i2.Unit {
+  _FakeUnit_2(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -76,99 +66,99 @@ class _FakeUnit_3 extends _i1.SmartFake implements _i2.Unit {
 /// A class which mocks [ProductRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockProductRepository extends _i1.Mock implements _i5.ProductRepository {
+class MockProductRepository extends _i1.Mock implements _i4.ProductRepository {
   MockProductRepository() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i6.Future<_i2.Either<_i7.Failure, _i4.Product>> viewSpecificProduct(
+  _i5.Future<_i2.Either<_i6.Failure, _i7.Product>> viewSpecificProduct(
           String? id) =>
       (super.noSuchMethod(
         Invocation.method(
           #viewSpecificProduct,
           [id],
         ),
-        returnValue: _i6.Future<_i2.Either<_i7.Failure, _i4.Product>>.value(
-            _FakeEither_0<_i7.Failure, _i4.Product>(
+        returnValue: _i5.Future<_i2.Either<_i6.Failure, _i7.Product>>.value(
+            _FakeEither_0<_i6.Failure, _i7.Product>(
           this,
           Invocation.method(
             #viewSpecificProduct,
             [id],
           ),
         )),
-      ) as _i6.Future<_i2.Either<_i7.Failure, _i4.Product>>);
+      ) as _i5.Future<_i2.Either<_i6.Failure, _i7.Product>>);
 
   @override
-  _i6.Future<_i2.Either<_i7.Failure, List<_i4.Product>>> viewAllProducts() =>
+  _i5.Future<_i2.Either<_i6.Failure, List<_i7.Product>>> viewAllProducts() =>
       (super.noSuchMethod(
         Invocation.method(
           #viewAllProducts,
           [],
         ),
         returnValue:
-            _i6.Future<_i2.Either<_i7.Failure, List<_i4.Product>>>.value(
-                _FakeEither_0<_i7.Failure, List<_i4.Product>>(
+            _i5.Future<_i2.Either<_i6.Failure, List<_i7.Product>>>.value(
+                _FakeEither_0<_i6.Failure, List<_i7.Product>>(
           this,
           Invocation.method(
             #viewAllProducts,
             [],
           ),
         )),
-      ) as _i6.Future<_i2.Either<_i7.Failure, List<_i4.Product>>>);
+      ) as _i5.Future<_i2.Either<_i6.Failure, List<_i7.Product>>>);
 
   @override
-  _i6.Future<_i2.Either<_i7.Failure, _i2.Unit>> deleteProduct(String? id) =>
+  _i5.Future<_i2.Either<_i6.Failure, _i2.Unit>> deleteProduct(String? id) =>
       (super.noSuchMethod(
         Invocation.method(
           #deleteProduct,
           [id],
         ),
-        returnValue: _i6.Future<_i2.Either<_i7.Failure, _i2.Unit>>.value(
-            _FakeEither_0<_i7.Failure, _i2.Unit>(
+        returnValue: _i5.Future<_i2.Either<_i6.Failure, _i2.Unit>>.value(
+            _FakeEither_0<_i6.Failure, _i2.Unit>(
           this,
           Invocation.method(
             #deleteProduct,
             [id],
           ),
         )),
-      ) as _i6.Future<_i2.Either<_i7.Failure, _i2.Unit>>);
+      ) as _i5.Future<_i2.Either<_i6.Failure, _i2.Unit>>);
 
   @override
-  _i6.Future<_i2.Either<_i7.Failure, _i4.Product>> updateProduct(
-          _i4.Product? product) =>
+  _i5.Future<_i2.Either<_i6.Failure, _i7.Product>> updateProduct(
+          _i7.Product? product) =>
       (super.noSuchMethod(
         Invocation.method(
           #updateProduct,
           [product],
         ),
-        returnValue: _i6.Future<_i2.Either<_i7.Failure, _i4.Product>>.value(
-            _FakeEither_0<_i7.Failure, _i4.Product>(
+        returnValue: _i5.Future<_i2.Either<_i6.Failure, _i7.Product>>.value(
+            _FakeEither_0<_i6.Failure, _i7.Product>(
           this,
           Invocation.method(
             #updateProduct,
             [product],
           ),
         )),
-      ) as _i6.Future<_i2.Either<_i7.Failure, _i4.Product>>);
+      ) as _i5.Future<_i2.Either<_i6.Failure, _i7.Product>>);
 
   @override
-  _i6.Future<_i2.Either<_i7.Failure, _i4.Product>> addProduct(
-          _i4.Product? product) =>
+  _i5.Future<_i2.Either<_i6.Failure, _i7.Product>> addProduct(
+          _i7.Product? product) =>
       (super.noSuchMethod(
         Invocation.method(
           #addProduct,
           [product],
         ),
-        returnValue: _i6.Future<_i2.Either<_i7.Failure, _i4.Product>>.value(
-            _FakeEither_0<_i7.Failure, _i4.Product>(
+        returnValue: _i5.Future<_i2.Either<_i6.Failure, _i7.Product>>.value(
+            _FakeEither_0<_i6.Failure, _i7.Product>(
           this,
           Invocation.method(
             #addProduct,
             [product],
           ),
         )),
-      ) as _i6.Future<_i2.Either<_i7.Failure, _i4.Product>>);
+      ) as _i5.Future<_i2.Either<_i6.Failure, _i7.Product>>);
 }
 
 /// A class which mocks [NetworkInfo].
@@ -180,10 +170,10 @@ class MockNetworkInfo extends _i1.Mock implements _i8.NetworkInfo {
   }
 
   @override
-  _i6.Future<bool> get isConnected => (super.noSuchMethod(
+  _i5.Future<bool> get isConnected => (super.noSuchMethod(
         Invocation.getter(#isConnected),
-        returnValue: _i6.Future<bool>.value(false),
-      ) as _i6.Future<bool>);
+        returnValue: _i5.Future<bool>.value(false),
+      ) as _i5.Future<bool>);
 }
 
 /// A class which mocks [LocalDataSource].
@@ -195,30 +185,30 @@ class MockLocalDataSource extends _i1.Mock implements _i9.LocalDataSource {
   }
 
   @override
-  _i6.Future<_i3.ProductModel> getLastProduct() => (super.noSuchMethod(
+  _i5.Future<_i3.ProductModel> getLastProduct() => (super.noSuchMethod(
         Invocation.method(
           #getLastProduct,
           [],
         ),
-        returnValue: _i6.Future<_i3.ProductModel>.value(_FakeProductModel_1(
+        returnValue: _i5.Future<_i3.ProductModel>.value(_FakeProductModel_1(
           this,
           Invocation.method(
             #getLastProduct,
             [],
           ),
         )),
-      ) as _i6.Future<_i3.ProductModel>);
+      ) as _i5.Future<_i3.ProductModel>);
 
   @override
-  _i6.Future<void> cacheProducts(List<_i3.ProductModel>? products) =>
+  _i5.Future<void> cacheProducts(List<_i3.ProductModel>? products) =>
       (super.noSuchMethod(
         Invocation.method(
           #cacheProducts,
           [products],
         ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
 }
 
 /// A class which mocks [RemoteDataSource].
@@ -230,74 +220,75 @@ class MockRemoteDataSource extends _i1.Mock implements _i10.RemoteDataSource {
   }
 
   @override
-  _i6.Future<_i4.Product> viewSpecificProduct(String? id) =>
+  _i5.Future<_i3.ProductModel> getSpecificProduct(String? id) =>
       (super.noSuchMethod(
         Invocation.method(
-          #viewSpecificProduct,
+          #getSpecificProduct,
           [id],
         ),
-        returnValue: _i6.Future<_i4.Product>.value(_FakeProduct_2(
+        returnValue: _i5.Future<_i3.ProductModel>.value(_FakeProductModel_1(
           this,
           Invocation.method(
-            #viewSpecificProduct,
+            #getSpecificProduct,
             [id],
           ),
         )),
-      ) as _i6.Future<_i4.Product>);
+      ) as _i5.Future<_i3.ProductModel>);
 
   @override
-  _i6.Future<List<_i4.Product>> viewAllProducts() => (super.noSuchMethod(
+  _i5.Future<List<_i3.ProductModel>> getAllProducts() => (super.noSuchMethod(
         Invocation.method(
-          #viewAllProducts,
+          #getAllProducts,
           [],
         ),
-        returnValue: _i6.Future<List<_i4.Product>>.value(<_i4.Product>[]),
-      ) as _i6.Future<List<_i4.Product>>);
+        returnValue:
+            _i5.Future<List<_i3.ProductModel>>.value(<_i3.ProductModel>[]),
+      ) as _i5.Future<List<_i3.ProductModel>>);
 
   @override
-  _i6.Future<_i2.Unit> deleteProduct(String? id) => (super.noSuchMethod(
+  _i5.Future<_i2.Unit> deleteProduct(String? id) => (super.noSuchMethod(
         Invocation.method(
           #deleteProduct,
           [id],
         ),
-        returnValue: _i6.Future<_i2.Unit>.value(_FakeUnit_3(
+        returnValue: _i5.Future<_i2.Unit>.value(_FakeUnit_2(
           this,
           Invocation.method(
             #deleteProduct,
             [id],
           ),
         )),
-      ) as _i6.Future<_i2.Unit>);
+      ) as _i5.Future<_i2.Unit>);
 
   @override
-  _i6.Future<_i4.Product> updateProduct(_i4.Product? product) =>
+  _i5.Future<_i3.ProductModel> updateProduct(_i3.ProductModel? product) =>
       (super.noSuchMethod(
         Invocation.method(
           #updateProduct,
           [product],
         ),
-        returnValue: _i6.Future<_i4.Product>.value(_FakeProduct_2(
+        returnValue: _i5.Future<_i3.ProductModel>.value(_FakeProductModel_1(
           this,
           Invocation.method(
             #updateProduct,
             [product],
           ),
         )),
-      ) as _i6.Future<_i4.Product>);
+      ) as _i5.Future<_i3.ProductModel>);
 
   @override
-  _i6.Future<_i4.Product> addProduct(_i4.Product? product) =>
+  _i5.Future<_i3.ProductModel> addProduct(_i3.ProductModel? product) =>
       (super.noSuchMethod(
         Invocation.method(
           #addProduct,
           [product],
         ),
-        returnValue: _i6.Future<_i4.Product>.value(_FakeProduct_2(
+        returnValue: _i5.Future<_i3.ProductModel>.value(_FakeProductModel_1(
           this,
           Invocation.method(
             #addProduct,
             [product],
           ),
         )),
-      ) as _i6.Future<_i4.Product>);
+      ) as _i5.Future<_i3.ProductModel>);
 }
