@@ -10,7 +10,6 @@ import '../datasources/product_local_data_source.dart';
 import '../datasources/product_remote_data_source.dart';
 import '../models/product_model.dart';
 
-
 class ProductRepositoryImpl extends ProductRepository {
   final NetworkInfo networkInfo;
   final LocalDataSource localDataSource;
@@ -57,7 +56,7 @@ class ProductRepositoryImpl extends ProductRepository {
     if (await networkInfo.isConnected) {
       try {
         final remoteProducts = await remoteDataSource.viewAllProducts();
-        localDataSource.cacheAllProducts(remoteProducts);
+        localDataSource.cacheProducts(remoteProducts);
         final List<Product> productEntities = remoteProducts;
         return Right(productEntities);
       } on ServerException {
@@ -65,8 +64,10 @@ class ProductRepositoryImpl extends ProductRepository {
       }
     } else {
       try {
-        final result = await localDataSource.viewAllProducts();
-        final List<Product> productEntities = result;
+        final result = await localDataSource.getLastProduct();
+        // might make an error 
+        Product res = result;
+        final List<Product> productEntities = [res];
         return Right(productEntities);
       } on CacheException {
         return const Left(CacheFailure(''));
@@ -85,7 +86,7 @@ class ProductRepositoryImpl extends ProductRepository {
       }
     } else {
       try {
-        final result = await localDataSource.viewSpecificProduct(id);
+        final result = await localDataSource.getLastProduct();
         final Product resultEntity = result.toEntity();
         return Right(resultEntity);
       } catch (e) {
@@ -113,9 +114,8 @@ class ProductRepositoryImpl extends ProductRepository {
     }
   }
 }
-void main() {
-  
-}
+
+void main() {}
 
 // import 'package:dartz/dartz.dart';
 
