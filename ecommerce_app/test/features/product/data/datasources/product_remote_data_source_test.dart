@@ -48,7 +48,7 @@ void main() {
               .thenAnswer((_) async =>
                   http.Response(fixture('actual_product.json'), 200));
           // act
-          final result = await dataSource.getSpecificProduct(testId);
+          final result = await dataSource.viewSpecificProduct(testId);
           //assert
 
           verify(
@@ -71,7 +71,7 @@ void main() {
         )).thenAnswer((_) async => http.Response(decodedString, 200));
 
         // Act
-        final call = await dataSource.getSpecificProduct;
+        final call = await dataSource.viewSpecificProduct;
 
         // Assert
         expect(
@@ -90,7 +90,7 @@ void main() {
           });
 
           //act
-          final call = dataSource.getSpecificProduct;
+          final call = dataSource.viewSpecificProduct;
           //assert
           expect(() => call(testId),
               throwsA(const TypeMatcher<ServerException>()));
@@ -117,7 +117,7 @@ void main() {
           return http.Response(fixture('actual_products.json'), 200);
         });
         //act
-        final result = await dataSource.getAllProducts();
+        final result = await dataSource.viewAllProducts();
         //assert
 
         verify(mockHttpClient.get(
@@ -140,7 +140,7 @@ void main() {
         });
 
         //act
-        final call = dataSource.getAllProducts;
+        final call = dataSource.viewAllProducts;
         //assert
         expect(() => call(), throwsA(const TypeMatcher<ServerException>()));
       },
@@ -158,7 +158,7 @@ void main() {
         });
 
         //act
-        final call = dataSource.getAllProducts;
+        final call = dataSource.viewAllProducts;
         //assert
         expect(() => call(), throwsA(const TypeMatcher<ServerException>()));
       },

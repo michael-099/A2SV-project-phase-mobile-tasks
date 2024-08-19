@@ -96,7 +96,7 @@ void main() {
         '\nshould return remote repository when the device is online\n',
         () async {
           //arrange
-          when(mockRemoteDataSource.viewSpecificProduct(any))
+          when(mockRemoteDataSource.viewSpecificProduct('11'))
               .thenAnswer((_) async {
             return testProductModel;
           });
@@ -113,7 +113,7 @@ void main() {
         '\nshould throw a server Failure it is offline',
         () async {
           //arrange
-          when(mockRemoteDataSource.viewSpecificProduct(any))
+          when(mockRemoteDataSource.viewSpecificProduct('11'))
               .thenThrow(ServerException());
           //act
           final result =
