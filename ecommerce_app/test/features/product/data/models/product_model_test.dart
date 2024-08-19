@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:ecommerce_app/features/product/data/models/product_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import '../../helper/json_reader.dart';
+import '../../../../fixitures/json_reader.dart';
 
 void main() {
   final tProduct = ProductModel(
@@ -16,7 +16,7 @@ void main() {
   test(
     'should be a subclass of Product entity',
     () async {
-      const path = '/features/product/helper/dummy_data/dummy.json';
+      const path = 'fixitures/dummy.dart';
       final Map<String, dynamic> jsonMap =
           json.decode(readJson(path));
       // expect(tProduct, isA<Product>());

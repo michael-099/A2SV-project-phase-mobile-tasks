@@ -1,3 +1,5 @@
+import 'package:shared_preferences/shared_preferences.dart';
+
 import '../../domain/entities/product.dart';
 import '../models/product_model.dart';
 
@@ -7,9 +9,9 @@ abstract class LocalDataSource {
 }
 
 class ProductLocalDataSourceImpl implements LocalDataSource {
-  // final SharedPreferences sharedPreferences;
+  final SharedPreferences sharedPreferences;
 
-  // NumberTriviaLocalDataSourceImpl({@required this.sharedPreferences});
+  ProductLocalDataSourceImpl({required this.sharedPreferences});
   @override
   Future<void> cacheProducts(List<Product> products) {
     // TODO: implement cacheProducts
