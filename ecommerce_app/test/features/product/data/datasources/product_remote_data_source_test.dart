@@ -21,13 +21,11 @@ import 'product_remote_data_source_test.mocks.dart';
 
 void main() {
   late MockClient mockHttpClient;
-  late MockMultipartFile mockMultipartFile;
   late RemoteDataSourceImpl dataSource;
 
   setUp(() {
     mockHttpClient = MockClient();
     dataSource = RemoteDataSourceImpl(client: mockHttpClient);
-    mockMultipartFile = MockMultipartFile();
   });
   const URL =
       'https://g5-flutter-learning-path-be.onrender.com/api/v1/products';

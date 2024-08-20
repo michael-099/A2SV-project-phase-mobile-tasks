@@ -37,7 +37,6 @@ void main() {
 
   final Product testProductEntity = testProductModel;
 
-  List<ProductModel> tProductModels = [testProductModel];
 
   void runTestsOnline(Function body) {
     group('\ndevice is online\n', () {
