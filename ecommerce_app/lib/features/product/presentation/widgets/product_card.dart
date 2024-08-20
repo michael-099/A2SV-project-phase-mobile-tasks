@@ -4,14 +4,14 @@ import 'product_description.dart';
 import 'product_name_and_price.dart';
 
 class ProductCard extends StatelessWidget {
-  String productName;
-  String price;
-  String label;
-  String rating;
+  final String productName;
+  final String price;
+  final String label;
+  final String rating;
   // double width;
   // double height;
 
-  ProductCard({super.key, 
+  const ProductCard({super.key, 
     required this.productName,
     required this.price,
     required this.label,
