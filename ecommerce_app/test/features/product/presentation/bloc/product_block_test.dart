@@ -86,7 +86,7 @@ void main() {
           .thenAnswer((_) async => Right([product]));
       return productBloc;
     },
-    act: (bloc) => bloc.add(LoadAllProductsEvent()),
+    act: (bloc) => bloc.add(const LoadAllProductsEvent()),
     expect: () => [
       AllProductsLoadingState(),
       LoadedAllProductsState([product]),
@@ -103,7 +103,7 @@ void main() {
           .thenAnswer((_) async => Right(product));
       return productBloc;
     },
-    act: (bloc) => bloc.add(GetSpecificProductEvent(id: '02')),
+    act: (bloc) => bloc.add(const GetSpecificProductEvent(id: '02')),
     expect: () => [
       SpecificProductLoadingState(),
       LoadedSpecificProductState(product),
@@ -135,10 +135,10 @@ void main() {
     'should emit [SpecificProductLoadingState, SucessState] when deleting a product is successful',
     build: () {
       when(mockDeleteProduct.execute(id: '02'))
-          .thenAnswer((_) async => Right(unit));
+          .thenAnswer((_) async => const Right(unit));
       return productBloc;
     },
-    act: (bloc) => bloc.add(DeleteProductEvent(id: '02')),
+    act: (bloc) => bloc.add(const DeleteProductEvent(id: '02')),
     expect: () => [
       SpecificProductLoadingState(),
       const SucessState('Successfully deleted product.'),
