@@ -1,7 +1,8 @@
 import 'dart:convert';
 
-import 'package:ecommerce_app/features/product/data/models/product_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../models/product_model.dart';
 
 abstract class LocalDataSource {
   Future<ProductModel> getLastProduct();
